@@ -11,3 +11,14 @@ int isEmpty() {
 int isFull() {
     return (Rear == SIZE -1);
 }
+
+void enqueue(void* item) {
+    if (isFull())
+        printf("Overflow!\n");
+    else {
+        if (isEmpty())
+            Front = 0;
+        Rear += 1;
+        queue[Rear] = item;
+    }
+}
